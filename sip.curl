@@ -1,0 +1,23 @@
+#Acceso a información pública del sistema eléctrico
+token="d23fea76c62897e0576741328dbe49de"
+version="v2"
+url="https://sipub.api.coordinador.cl"
+recurso="recursos/demanda_sistema_real"
+carpeta="sipub/api"
+fecha="2021-07-10"
+
+echo "------------ con carpeta sipub/api-----------------"
+curl "$url/$carpeta/$version/$recurso/?user_key=$token&fecha=$fecha"
+
+
+#cambio en la carpeta-desaparece sipub
+#No devuelve nada
+carpeta="api"
+echo "----------con carpeta api----- desde 16 noviembre 2022-------"
+curl "$url/$carpeta/$version/$recurso/?user_key=$token&fecha=$fecha"
+
+
+
+
+
+
